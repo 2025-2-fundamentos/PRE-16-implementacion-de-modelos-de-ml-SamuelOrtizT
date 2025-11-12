@@ -25,7 +25,7 @@ class LinearRegression:
             y_pred = np.matmul(X, self.coefs_) + self.intercept_
 
             # Compute the gradient of the intercept
-            gradient_intercept_per_row = np.sum(-2 * (y - y_pred))
+            gradient_intercept_per_row = -2 * (y - y_pred)
             gradient_intercept_ = np.sum(gradient_intercept_per_row)
 
             # Compute the gradient of the coefficients
